@@ -1,21 +1,52 @@
-#apercu {
-  width: 50%;
-  height: 40vw;
+body {
+  overflow-x: hidden;
 }
-div {
+#list {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
 }
-img {
+
+#test {
+  width: 60%;
+  height: 60%;
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+p {
+  align-items: center;
+}
+
+#test .first-part {
+  box-sizing: border-box;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+  margin-bottom: 10%;
+  overflow-y: scroll;
+}
+
+#img-card {
+  width: 60%;
+  height: 40px;
+}
+
+.carte {
   width: 60px;
+  background-image: url("./img/po.png");
+  background-size: contain;
   animation-duration: 3s;
   animation-iteration-count: inherit;
   transform-origin: bottom;
-}
-.back {
-  position: absolute;
 }
 
 .flip {
@@ -33,10 +64,12 @@ img {
     animation-timing-function: ease-out;
   }
   50% {
+    background-image: url("img/po2.png");
     transform: perspective(400px) translateZ(150px) rotateY(170deg);
     animation-timing-function: ease-out;
   }
   100% {
+    background-image: url("img/po2.png");
     transform: perspective(400px) translateZ(150px) rotateY(180deg) scale(1);
     animation-timing-function: step-end;
   }
@@ -45,4 +78,25 @@ img {
 footer {
   padding-top: 20px;
   padding-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+  .po {
+    display: inline-block;
+    height: 20 px;
+    width: 10 px;
+  }
+
+  #list {
+    display: flex;
+    gap: 10px;
+    overflow-x: scroll;
+    white-space: nowrap;
+  }
+
+  footer {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
 }

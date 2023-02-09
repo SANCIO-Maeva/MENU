@@ -8,11 +8,14 @@ div {
   justify-content: center;
   gap: 30px;
 }
-.carte {
+img {
   width: 60px;
   animation-duration: 3s;
   animation-iteration-count: inherit;
   transform-origin: bottom;
+}
+.back {
+  position: absolute;
 }
 
 .flip {
@@ -42,5 +45,4 @@ div {
 footer {
   padding-top: 20px;
   padding-bottom: 20px;
-  background-color: rebeccapurple;
 }

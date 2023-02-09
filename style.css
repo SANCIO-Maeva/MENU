@@ -45,7 +45,7 @@ p {
   background-image: url("./img/po.png");
   background-size: contain;
   animation-duration: 3s;
-  animation-iteration-count: inherit;
+  animation-iteration-count: infinite;
   transform-origin: bottom;
 }
 
@@ -63,14 +63,23 @@ p {
     transform: perspective(400px) rotateY(0);
     animation-timing-function: ease-out;
   }
-  50% {
-    background-image: url("img/po2.png");
-    transform: perspective(400px) translateZ(150px) rotateY(170deg);
+  20% {
+    background-image: url("./img/po.png");
+    transform: perspective(400px) translateZ(150px) rotateY(90deg);
+    animation-timing-function: ease-out;
+  }
+  40% {
+    transform: perspective(400px) translateZ(150px) rotateY(180deg);
+    animation-timing-function: ease-out;
+  }
+  80% {
+    background-image: url("./img/po.png");
+    transform: perspective(400px) translateZ(150px) rotateY(270deg);
     animation-timing-function: ease-out;
   }
   100% {
     background-image: url("img/po2.png");
-    transform: perspective(400px) translateZ(150px) rotateY(180deg) scale(1);
+    transform: perspective(400px) translateZ(150px) rotateY(360deg) scale(1);
     animation-timing-function: step-end;
   }
 }
